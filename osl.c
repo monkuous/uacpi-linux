@@ -81,10 +81,11 @@ uacpi_status uacpi_kernel_install_interrupt_handler(
         uacpi_handle ctx,
         uacpi_handle *out_irq_handle
 ) {
-    STUB();
+    return UACPI_STATUS_UNIMPLEMENTED;
 }
 
 uacpi_status uacpi_kernel_uninstall_interrupt_handler(uacpi_interrupt_handler handler, uacpi_handle irq_handle) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
@@ -97,6 +98,7 @@ void uacpi_kernel_free_event(uacpi_handle handle) {
 }
 
 uacpi_status uacpi_kernel_schedule_work(uacpi_work_type type, uacpi_work_handler handler, uacpi_handle ctx) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
@@ -109,6 +111,7 @@ void uacpi_kernel_io_unmap(uacpi_handle handle) {
 }
 
 uacpi_status uacpi_kernel_pci_device_open(uacpi_pci_address address, uacpi_handle *out_handle) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
@@ -155,26 +158,32 @@ uacpi_status uacpi_kernel_io_write32(uacpi_handle handle, uacpi_size offset, uac
 }
 
 uacpi_status uacpi_kernel_pci_read8(uacpi_handle device, uacpi_size offset, uacpi_u8 *value) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
 uacpi_status uacpi_kernel_pci_read16(uacpi_handle device, uacpi_size offset, uacpi_u16 *value) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
 uacpi_status uacpi_kernel_pci_read32(uacpi_handle device, uacpi_size offset, uacpi_u32 *value) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
 uacpi_status uacpi_kernel_pci_write8(uacpi_handle device, uacpi_size offset, uacpi_u8 value) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
 uacpi_status uacpi_kernel_pci_write16(uacpi_handle device, uacpi_size offset, uacpi_u16 value) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
 uacpi_status uacpi_kernel_pci_write32(uacpi_handle device, uacpi_size offset, uacpi_u32 value) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
@@ -227,6 +236,7 @@ void uacpi_kernel_log(uacpi_log_level level, const uacpi_char *str) {
 }
 
 uacpi_status uacpi_kernel_handle_firmware_request(uacpi_firmware_request *request) {
+    return UACPI_STATUS_UNIMPLEMENTED;
     STUB();
 }
 
