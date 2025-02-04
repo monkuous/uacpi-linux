@@ -17,21 +17,7 @@ static int main(void) {
         return 1;
     }
 
-    // `open("/dev/mem")` fails with ENOENT and `mknod("/dev/mem")` with EEXIST. Don't really care to figure it out.
-
-    error = syscall2(__NR_mkdir, (uintptr_t)"/dev/afhaahga", S_IRWXU | S_IRGRP | S_IWGRP | S_IROTH | S_IXOTH);
-    if (error) {
-        uacpi_log(UACPI_LOG_ERROR, "failed to create dir: %d\n", error);
-        return 1;
-    }
-
-    error = syscall3(__NR_mknod, (uintptr_t)"/dev/afhaahga/mem", S_IFCHR | S_IRUSR | S_IWUSR, 0x101);
-    if (error) {
-        uacpi_log(UACPI_LOG_ERROR, "failed to create mem: %d\n", error);
-        return 1;
-    }
-
-    ramfd = syscall3(__NR_open, (uintptr_t)"/dev/afhaahga/mem", O_RDWR, 0);
+    ramfd = syscall3(__NR_open, (uintptr_t)"/dev/mem", O_RDWR, 0);
     if (ramfd < 0) {
         uacpi_log(UACPI_LOG_ERROR, "failed to open mem: %d\n", ramfd);
         return 1;
